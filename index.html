@@ -19,91 +19,56 @@
         <td colspan="12">
           <div class="top-buttons">
             <div>
-              <input
-                type="button"
-                value="MC"
-                onclick="dis('mc')"
-                onkeydown="myFunction()"
-              />
+              <button type="button" value="MC" onclick="dis('mc')">MC</button>
             </div>
             <div>
-              <input
-                type="button"
-                value="MR"
-                onclick="dis('mr')"
-                onkeydown="myFunction()"
-              />
+              <button type="button" value="MR" onclick="dis('mr')">MR</button>
             </div>
             <div>
-              <input
-                type="button"
-                value="M+"
-                onclick="dis('m+')"
-                onkeydown="myFunction()"
-              />
+              <button type="button" value="M+" onclick="dis('m+')">M+</button>
             </div>
             <div>
-              <input
-                type="button"
-                value="M-"
-                onclick="dis('m-')"
-                onkeydown="myFunction()"
-              />
+              <button type="button" value="M-" onclick="dis('m-')">M-</button>
             </div>
             <div>
-              <input
-                type="button"
-                value="MS"
-                onclick="dis('ms')"
-                onkeydown="myFunction()"
-              />
+              <button type="button" value="MS" onclick="dis('ms')">MS</button>
             </div>
             <div>
-              <input
-                type="button"
-                value="M"
-                onclick="dis('m')"
-                onkeydown="myFunction()"
-              />
+              <button type="button" value="M" onclick="dis('m')">
+                M&#8910;
+              </button>
             </div>
           </div>
         </td>
       </tr>
       <tr></tr>
       <td>
-        <input
-          type="button"
-          value="%"
-          onclick="dis('%')"
-          onkeydown="myFunction()"
-        />
+        <button type="button" value="%" onclick="specialOperations('%')">
+          &#37;
+        </button>
       </td>
       <td>
-        <input
-          type="button"
-          value="CE"
-          onclick="clearInput(false)"
-          onkeydown="myFunction()"
-        />
+        <button type="button" value="CE" onclick="clearInput(false)">CE</button>
       </td>
       <td>
-        <input type="button" value="C" onclick="clearInput(true)" />
+        <button type="button" value="C" onclick="clearInput(true)">C</button>
       </td>
       <td>
-        <input
-          type="button"
-          value="back"
-          onclick="dis('back')"
-          onkeydown="myFunction()"
-        />
+        <button type="button" value="back" onclick="clearInput('back')">
+          &#8882;
+        </button>
       </td>
       <tr></tr>
       <td>
-        <input type="button" value="1/x" onclick="specialOperations('1/x')" />
+        <button type="button" value="1/x" onclick="specialOperations('1/x')">
+          &#185;&#8725;&#8339;
+        </button>
       </td>
 
       <td>
-        <input type="button" value="x2" onclick="specialOperations('x2')" />
+        <button type="button" value="x2" onclick="specialOperations('x2')">
+          &#8339;&#178;
+        </button>
       </td>
       <td>
         <button
@@ -111,72 +76,75 @@
           value="2/x"
           onclick="specialOperations('squareroot')"
         >
-          &#8730;x
+          &#178;&#8730;&#8339;
         </button>
       </td>
       <td>
-        <input type="button" value="÷" onclick="solveMath('divide')" />
+        <button type="button" value="÷" onclick="solveMath('divide')">
+          &#247;
+        </button>
       </td>
       <tr></tr>
       <td>
-        <input type="button" value="7" onclick="displayNum('7')" />
+        <button type="button" value="7" onclick="displayNum('7')">7</button>
       </td>
       <td>
-        <input type="button" value="8" onclick="displayNum('8')" />
+        <button type="button" value="8" onclick="displayNum('8')">8</button>
       </td>
       <td>
-        <input type="button" value="9" onclick="displayNum('9')" />
+        <button type="button" value="9" onclick="displayNum('9')">9</button>
       </td>
       <td>
-        <input type="button" value="*" onclick="solveMath('multiply')" />
+        <button type="button" value="*" onclick="solveMath('multiply')">
+          &#215;
+        </button>
       </td>
 
       <tr>
         <td>
-          <input type="button" value="4" onclick="displayNum('4')" />
+          <button type="button" value="4" onclick="displayNum('4')">4</button>
         </td>
         <td>
-          <input type="button" value="5" onclick="displayNum('5')" />
+          <button type="button" value="5" onclick="displayNum('5')">5</button>
         </td>
         <td>
-          <input type="button" value="6" onclick="displayNum('6')" />
+          <button type="button" value="6" onclick="displayNum('6')">6</button>
         </td>
         <td>
-          <input type="button" value="-" onclick="solveMath('minus')" />
+          <button type="button" value="-" onclick="solveMath('minus')">
+            &#8722;
+          </button>
         </td>
       </tr>
       <tr>
         <td>
-          <input type="button" value="1" onclick="displayNum('1')" />
+          <button type="button" value="1" onclick="displayNum('1')">1</button>
         </td>
         <td>
-          <input type="button" value="2" onclick="displayNum('2')" />
+          <button type="button" value="2" onclick="displayNum('2')">2</button>
         </td>
         <td>
-          <input type="button" value="3" onclick="displayNum('3')" />
+          <button type="button" value="3" onclick="displayNum('3')">3</button>
         </td>
         <td>
-          <input type="button" value="+" onclick="solveMath('add')" />
+          <button type="button" value="+" onclick="solveMath('add')">
+            &#43;
+          </button>
         </td>
       </tr>
 
       <tr></tr>
       <td>
-        <input
-          type="button"
-          value="+-"
-          onclick="dis('+-')"
-          onkeydown="myFunction()"
-        />
+        <button type="button" value="+-" onclick="dis('+-')">+-</button>
       </td>
       <td>
-        <input type="button" value="0" onclick="displayNum('0')" />
+        <button type="button" value="0" onclick="displayNum('0')">0</button>
       </td>
       <td>
-        <input type="button" value="." onclick="dis('.')" />
+        <button type="button" value="." onclick="dis('.')">.</button>
       </td>
       <td>
-        <input type="button" value="=" onclick="solveMath('equal')" />
+        <button type="button" value="=" onclick="solveMath('equal')">=</button>
       </td>
     </table>
     <script>
