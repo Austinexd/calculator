@@ -141,7 +141,7 @@
         <button type="button" value="0" onclick="displayNum('0')">0</button>
       </td>
       <td>
-        <button type="button" value="." onclick="dis('.')">.</button>
+        <button type="button" value="." onclick="displayNum('.')">.</button>
       </td>
       <td>
         <button type="button" value="=" onclick="solveMath('equal')">=</button>
@@ -151,6 +151,16 @@
       let previousResult;
       let currentOperation;
       let startAgain = false;
+
+      function addPositiveOrNegative() {
+        const value = Number(document.getElementById("result").value);
+
+        if (value < 0) {
+          document.getElementById("result").value = Math.abs(value);
+        } else {
+          document.getElementById("result").value = "-" + value;
+        }
+      }
 
       function displayNum(number) {
         if (currentOperation && startAgain) {
@@ -173,6 +183,12 @@
         }
 
         switch (currentOperation) {
+          case ".":
+            if (previousResult && currentOperation !== operation) {
+              newResult = previousResult + result;
+              previousResult = 0;
+            } else currentOperation = ".";
+            break;
           case "add":
             if (previousResult && currentOperation !== operation) {
               newResult = previousResult + result;
