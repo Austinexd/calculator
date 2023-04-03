@@ -19,22 +19,30 @@
         <td colspan="12">
           <div class="top-buttons">
             <div>
-              <button type="button" value="MC" onclick="dis('mc')">MC</button>
+              <button type="button" value="MC" onclick="memoryClear()">
+                MC
+              </button>
             </div>
             <div>
-              <button type="button" value="MR" onclick="dis('mr')">MR</button>
+              <button type="button" value="MR" onclick="memoryRecall()">
+                MR
+              </button>
             </div>
             <div>
-              <button type="button" value="M+" onclick="dis('m+')">M+</button>
+              <button type="button" value="M+" onclick="memoryAdd()">M+</button>
             </div>
             <div>
-              <button type="button" value="M-" onclick="dis('m-')">M-</button>
+              <button type="button" value="M-" onclick="memorySubtract()">
+                M-
+              </button>
             </div>
             <div>
-              <button type="button" value="MS" onclick="dis('ms')">MS</button>
+              <button type="button" value="MS" onclick="memorySave()">
+                MS
+              </button>
             </div>
             <div>
-              <button type="button" value="M" onclick="dis('m')">
+              <button type="button" value="M" onclick="memoryValue()">
                 M&#8910;
               </button>
             </div>
@@ -151,6 +159,32 @@
       let previousResult;
       let currentOperation;
       let startAgain = false;
+      let memoryValue = 0;
+
+      function memoryClear() {
+        memoryValue = 0;
+        console.log(memoryValue);
+      }
+
+      function memoryRecall() {
+        document.getElementById("result").value = memoryValue;
+        console.log(memoryValue);
+      }
+
+      function memoryAdd() {
+        memoryValue += parseFloat(document.getElementById("result").value);
+        console.log(memoryValue);
+      }
+
+      function memorySubtract() {
+        memoryValue -= parseFloat(document.getElementById("result").value);
+        console.log(memoryValue);
+      }
+
+      function memorySave() {
+        memoryValue = parseFloat(document.getElementById("result").value);
+        console.log(memoryValue);
+      }
 
       function addPositiveOrNegative() {
         const value = Number(document.getElementById("result").value);
